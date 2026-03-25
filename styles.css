@@ -1,0 +1,103 @@
+:root {
+  --bg: #080808;
+  --bg-soft: #131313;
+  --card: #111111;
+  --ink: #f6f1f1;
+  --ink-muted: #b8a7a7;
+  --red-strong: #d11212;
+  --red-glow: #ff3b3b;
+  --line: #2a0f0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(209, 18, 18, 0.28), transparent 42%),
+    radial-gradient(circle at 88% 88%, rgba(255, 59, 59, 0.18), transparent 36%),
+    linear-gradient(160deg, #050505 0%, #0b0b0b 52%, #100606 100%);
+}
+
+.page {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: clamp(2rem, 3vw, 3rem) 0 clamp(2.5rem, 4vw, 4rem);
+}
+
+.hero {
+  text-align: center;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background:
+    linear-gradient(140deg, rgba(209, 18, 18, 0.18), rgba(0, 0, 0, 0.7)),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.02) 0 6px,
+      rgba(255, 255, 255, 0) 6px 12px
+    );
+  box-shadow:
+    0 12px 34px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 59, 59, 0.1);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--red-glow);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1.9rem, 5vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  margin: 0.7rem 0 0;
+  color: var(--ink-muted);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.embed-card {
+  margin-top: clamp(1.2rem, 2.4vw, 1.8rem);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid #3b1515;
+  border-radius: 16px;
+  background:
+    linear-gradient(160deg, rgba(21, 21, 21, 0.92), rgba(8, 8, 8, 0.97)),
+    radial-gradient(circle at 0 0, rgba(255, 59, 59, 0.07), transparent 55%);
+  box-shadow:
+    0 0 0 1px rgba(255, 59, 59, 0.05),
+    0 16px 36px rgba(0, 0, 0, 0.48);
+}
+
+.commonninja_component {
+  min-height: 340px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(1120px, 94vw);
+    padding-top: 1.2rem;
+  }
+
+  .hero,
+  .embed-card {
+    border-radius: 12px;
+  }
+}
